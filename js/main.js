@@ -24,7 +24,12 @@ function ObtenerLista(text) {
 	checkbox.setAttribute("type", "checkbox");
 	checkbox.setAttribute("class", "element");
 	checkbox.onchange =  function() {
-		parrafo.innerHTML =  text.strike();  
+		if (this.checked) {
+			parrafo.innerHTML =  text.strike();  
+		}else {
+			parrafo.innerHTML =  text;	
+		}
+		
 	}
 	var parrafo = document.createElement("div");
 	parrafo.id = "texto";
@@ -34,6 +39,7 @@ function ObtenerLista(text) {
 	icon.setAttribute("class", "glyphicon glyphicon-trash");
 	icon.setAttribute("id", "trash");
 	icon.onclick = function() {
+
 		llamarDiv.removeChild(crearElemento)
 	}
 
@@ -45,7 +51,7 @@ function ObtenerLista(text) {
 }
 
 function clean() {
-	var LamarID =document.getElementById("inputBox");
+	var llamarID =document.getElementById("inputBox");
 	inputBox.value = "";
 	inputBox.focus();
 }

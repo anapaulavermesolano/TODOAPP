@@ -1,9 +1,11 @@
 /*font-family: 'Poiret One', cursive;*/
+body {
+	background: url("../tile1.png")repeat;
+}
 .fixed {
 	position: fixed;
 	width: 100%;
 	z-index: 5;
-	background-color: #fff;
 }
 .tittle {
 	width: 100%;
